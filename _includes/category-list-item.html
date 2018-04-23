@@ -1,0 +1,18 @@
+<div>
+	<div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large">
+		<div class="uk-card-media-top">
+			<div class="uk-inline uk-overflow-hidden">
+				<img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+				<div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+					<h3 class="uk-h5"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+				</div>
+				<div class="uk-position-top-right uk-padding-small">
+					<span class="uk-label pin-background-orange">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+				</div>
+				<div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+					<span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+				</div>
+			</div><!--//uk-inline-->
+		</div><!--//uk-card-media-top-->
+	</div>
+</div>

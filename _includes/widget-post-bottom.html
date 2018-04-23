@@ -1,0 +1,19 @@
+<div class="w-post">
+	<h5 class="uk-h2 uk-heading-divider-orange">Читать еще:</h5>
+	{% capture related_posts %}{{ page.categories }}{% endcapture %}
+	{% assign collection = site.categories[related_posts] %}
+	{% for article in collection limit: 5 %}
+	{% unless page.url == article.url %}
+	<a class="uk-grid-collapse uk-background-muted uk-box-shadow-small uk-box-shadow-hover-large uk-margin-small uk-link-muted" href="{{ article.url }}" title="{{ article.title }}" uk-grid>
+		<div class="uk-width-1-5@m uk-width-1-3 uk-cover-container">
+			<img src="{{ article.thumb }}" alt="{{ article.title }}" uk-cover>
+			<canvas height="50"></canvas>
+		</div>
+		<div class="uk-width-4-5@m uk-width-2-3 uk-padding-small">
+			<h6 class="uk-h4 uk-margin-remove">{{ article.title }}</h6>
+			<span class="uk-label pin-background-orange">{{ article.date | date: '%d' }}/{{ article.date | date: '%m' }}/{{ article.date | date: '%Y' }}</span>
+		</div>
+	</a><!--//uk-grid-->
+	{% endunless %}
+	{% endfor %}
+</div><!--//w-post-->

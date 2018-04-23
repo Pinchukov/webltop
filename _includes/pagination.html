@@ -1,0 +1,31 @@
+<div class="uk-text-center uk-margin-medium-top">
+    {% if paginator.total_pages > 1 %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="uk-button pin-button-orange" uk-icon="icon: arrow-right" uk-tooltip="Смотреть следующую страницу">Следующая страница</a>
+    {% endif %}
+    {% endif %}
+</div>
+
+{% if paginator.page_trail %}
+<ul class="uk-pagination uk-flex-center uk-text-lead uk-margin-medium">
+    {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path }}" uk-tooltip="Предыдущая страница"><span uk-pagination-previous></span></a></li>
+    {% else %}
+    <li><a href="#" class="uk-disabled"><span uk-tooltip="Предыдущая страница" uk-pagination-previous></span></a></li>
+    {% endif %}
+
+    {% for trail in paginator.page_trail %}
+    {% if page.url == trail.path %}
+    <li class="uk-active"><span>{{ trail.num }}</span></li>
+    {% else %}
+    <li><a href="{{ trail.path | remove: 'index.html' }}" uk-tooltip="{{ trail.title }}">{{ trail.num }}</a></li>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path }}" class="pagination-right" uk-tooltip="Следующая страница"><span uk-pagination-next></span></a></li>
+    {% else %}
+    <li><a href="#" class="uk-disabled"><span uk-pagination-next uk-tooltip="Следующая страница"></span></a></li>
+    {% endif %}
+</ul>
+{% endif %}

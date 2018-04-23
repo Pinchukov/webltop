@@ -1,0 +1,23 @@
+---
+layout: post
+title-seo: 'Разработчик запустил Slack на Commodore 64'
+description: 'Разработчик Джефф Харрис (Jeff Harris) написал клиент для популярного корпоративного мессенджера Slack, чтобы тот работал на Commodore 64.'
+title: 'Разработчик запустил Slack на Commodore 64'
+categories: 'diy'
+catname: 'DIY'
+image: 'images/diy/2018/2018-01-09-razrabotchik-zapustil-slack-na-commodore-64/1.jpg'
+thumb: 'images/diy/2018/2018-01-09-razrabotchik-zapustil-slack-na-commodore-64/1t.jpg'
+permalink: ':categories/:slug.html'
+---
+
+<blockquote>Чем только не занимаются люди в свободное время. Разработчик Джефф Харрис (Jeff Harris) написал клиент для популярного корпоративного мессенджера Slack, чтобы тот работал на Commodore 64.</blockquote>
+
+<p>Так как у Commodore 64 нет ни USB-C, ни простого USB порта, исследователю пришлось воспользоваться UserPort. Харрис сделал кабель, который одним концом подключается к UserPort, а на другом конце имеет конвертер USB TTL-RS-232, которым исследователь воспользовался для подсоединения Commodore 64 к Raspberry Pi. При помощи одноплатной «Малинки» Commodore 64 соединяется с интернетом.</p>
+
+<p>Когда аппаратный сетап был готов, Харрис написал приложение для Commodore 64, которое позволяет ему общаться с Raspberry Pi и получать от него данные. Затем исследователь создал приложение для самого Raspberry Pi , которое позволяет ему поддерживать связь с API Slack. В результате Raspberry Pi предоставляет Commodore 64 информацию об изменениях на Slack-канале, а также дает возможность отправлять и получать сообщения.</p>
+
+<div class="video">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/aIuSKUNrR6o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<p>Все исходные коды Харрис опубликовал на GitHub, а в своем блоге он выложил подробные инструкции. Отдельную инструкцию по созданию кабеля UserPort -> USB Харрис советует почитать {% extlink здесь https://1200baud.wordpress.com/2012/10/14/build-your-own-c64-2400-baud-usb-device-for-less-than-15/ %}.</p>

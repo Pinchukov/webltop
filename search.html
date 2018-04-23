@@ -1,0 +1,37 @@
+---
+layout: search
+title-seo: 'Поиск по сайту'
+description: 'SEO описание страницы поиск по сайту'
+title: 'Поиск по сайту'
+catname: Поиск по сайту
+image: 'images/electronics/cover.jpg'
+---
+
+<form class="uk-padding-small uk-background-muted" action="search.html" method="get">
+<div class="uk-grid-medium" uk-grid>
+  <div class="uk-width-expand">
+    <input class="uk-input" type="search" id="search-box" name="query" placeholder="Поиск по сайту...">
+  </div>
+  <div class="uk-width-auto">
+    <button class="uk-button pin-button-orange">Искать</button>
+  </div>
+</div>
+</form>
+
+
+<ul id="search-results" class="uk-list uk-list-striped"></ul>
+
+<script>
+  window.store = {
+    {% for post in site.posts %}
+    "{{ post.url | slugify }}": {
+      "title": "{{ post.title | xml_escape }}",
+      "author": "{{ post.author | xml_escape }}",
+      "category": "{{ post.category | xml_escape }}",
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+      "url": "{{ post.url | xml_escape }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>

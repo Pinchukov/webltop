@@ -1,0 +1,31 @@
+title: WeblTOP - Новости из мира IT
+name: WeblTOP
+description: Новости электроники, технологий, современных гаджетов, и другая актуальная информация современной IT индустрии
+
+themecolor: '#202225'
+imagehome: images/webltop.jpg
+url: 'http://webltop.ru'
+baseurl: '/'
+
+plugins: [jekyll-paginate-v2]
+# category_dir: blog
+pagination:
+  enabled: true
+  per_page: 12
+  title: ':title - страница :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'package-lock.json', 'assets/js/common.js', 'npm-debug.log', '**/Thumbs.db', 'assets/libs', 'assets/sass', '**/*.DS_Store']
+
+soc:
+  <a href="#" class="uk-icon-button uk-margin-small-right" uk-icon="twitter" uk-tooltip="Twitter"></a>
+  <a href="#" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook" uk-tooltip="Facebook"></a>
+  <a href="#" class="uk-icon-button  uk-margin-small-right" uk-icon="google-plus" uk-tooltip="Google Plus"></a>
+  <a href="sitemap.html" class="uk-icon-button" uk-icon="list" uk-tooltip="Карта сайта"></a>
+
+copyright: Копирование контента и размещение на других сайтах запрещено.

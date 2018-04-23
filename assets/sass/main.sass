@@ -1,0 +1,652 @@
+//@import "vars"
+@import "libs"
+
+
+=animation-trans($s)
+  -webkit-transition: all $s ease-out
+  -moz-transition: all $s ease-out
+  -ms-transition: all $s ease-out
+  -o-transition: all $s ease-out
+  transition: all $s ease-out
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+.animation-2s
+  +animation-trans(2s)
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+a
+  +animation-trans(2s)
+  &:hover, &:focus
+    color: rgba(#faa05a, .8)
+
+.pin-text-white
+	color: white !important
+.pin-text-orange
+	color: #faa05a !important
+
+.pin-link-white
+  color: white
+  text-decoration: underline
+  &:hover, &:focus
+  	color: rgba(white, .5)
+  	text-decoration: none
+
+.tdn
+  text-decoration: none
+
+.pin-background-orange
+	background-color: #faa05a !important
+
+
+.pin-button-orange
+  background-color: #faa05a !important
+  color: #fff
+  &:hover, &:focus
+    background-color: #faa05a
+    color: rgba(#fff, .8)
+  &:active, &.uk-active
+    background-color: #faa05a
+    color: rgba(#fff, .8)
+
+
+
+
+.uk-heading-divider-orange
+  padding-bottom: 10px
+  border-bottom: 3px solid #faa05a
+
+.pin-button-small
+  background-color: none
+  color: #fff
+  border: 1px solid white
+  padding: 0px 12px
+  cursor: pointer
+  +animation-trans(2s)
+  &:hover, &:focus
+    background-color: none
+    border: 1px solid #999
+    color: #999
+  &:active, &.uk-active
+    background-color: none
+    color: #999
+
+
+.pin-info
+  h2, h3, h4, h6
+  h2
+    font-size: 1.5rem
+    line-height: 1.3
+  h3
+    font-size: 1.25rem
+    line-height: 1.4
+  h4
+    font-size: 17px
+    line-height: 1.4
+  h5
+    font-size: .975rem
+    line-height: 1.4
+  h6
+    font-size: .875rem
+    line-height: 1.4
+ 
+.video
+  position: relative
+  padding-bottom: 56.25%
+  padding-top: 25px
+  height: 0
+  iframe
+    border: none
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%!important
+    height: 100%!important
+
+ 
+
+  blockquote
+    border:
+      top: 2px solid #faa05a
+      bottom: 2px solid #faa05a
+    margin:
+      top: 40px
+      bottom: 40px
+    padding: 20px
+
+  ul, ol
+    line-height: 2
+
+
+@media only screen and (max-width: 640px)
+  .pin-media
+    .uk-h4, .uk-h3
+      font-size: 16px
+  .pin-media
+    .uk-h2
+      font-size: 1.5rem
+
+  //ol
+    //counter-reset: olCounter
+    //padding: 0
+    //li
+      //list-style: none
+      //&:before
+        //counter-increment: olCounter
+        //content: counter(olCounter)
+        //color: white
+        //background: #faa05a
+        //display: inline-block
+        //text-align: center
+        //margin: 5px 10px
+        //line-height: 30px
+        //width: 30px
+        //height: 30px
+  //ol ol
+    //margin-left: 30px
+    //li
+      //list-style: none
+      //&:before
+        //counter-increment: olCounter
+        //content: counter(olCounter)
+        //color: #faa05a
+        //background: white
+        //border: 1px solid #faa05a
+        //display: inline-block
+        //text-align: center
+        //margin: 5px 10px
+        //line-height: 18px
+        //width: 18px
+        //height: 18px
+
+
+
+  //ul
+    //padding: 0
+    //li
+      //position: relative
+      //list-style: none
+      //line-height: 30px 
+      //height: 30px
+      //margin:
+        //left: 20px
+        //bottom: 1px
+      //padding:
+        //left: 20px
+      //&:before
+        //position: absolute
+        //top: 0
+        //Left: 0
+        //content: '•'
+        //color: #faa05a
+        //font-size: 28px
+        //display: inline-block
+    
+ 
+
+
+
+
+
+
+
+
+
+
+//likely
+.likely, .likely__widget
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  padding: 0
+  text-indent: 0 !important
+  list-style: none !important
+  font-weight: 400
+  font-family: Helvetica Neue,Arial,sans-serif
+
+.likely
+  display: inline-block
+
+.likely__widget
+  margin: 0
+  font-size: inherit
+
+.likely
+  opacity: 0
+  font-size: 0 !important
+
+.likely_visible
+  opacity: 1
+  transition: opacity .1s ease-in
+
+.likely > *
+  display: inline-block
+  visibility: hidden
+
+.likely_visible > *
+  visibility: inherit
+
+.likely__widget
+  position: relative
+  white-space: nowrap
+
+.likely__button, .likely__widget
+  display: inline-block
+
+.likely__button, .likely__counter
+  text-decoration: none
+  text-rendering: optimizeLegibility
+  margin: 0
+  outline: 0
+
+.likely__button
+  position: relative
+  user-select: none
+
+.likely__counter
+  display: none
+  position: relative
+  font-weight: 400
+
+.likely_ready
+  .likely__counter
+    display: inline-block
+  .likely__counter_empty
+    display: none
+
+.likely__button, .likely__counter, .likely__icon
+  vertical-align: top
+
+.likely__widget
+  vertical-align: top
+  transition: background .33s ease-out,color .33s ease-out,fill .33s ease-out
+  &:active, &:focus, &:hover
+    transition: none
+    cursor: pointer
+
+@media (hover: none)
+  .likely__widget
+    &:active, &:focus, &:hover
+      transition: background .33s ease-out,color .33s ease-out,fill .33s ease-out
+      cursor: unset
+
+.likely__icon
+  position: relative
+  text-align: left
+  display: inline-block
+
+.likely svg
+  position: absolute
+  left: 3px
+  top: 3px
+  width: 16px
+  height: 16px
+
+.likely__button, .likely__counter
+  line-height: inherit
+  cursor: inherit
+
+.likely__button:empty
+  display: none
+
+.likely__counter
+  text-align: center
+
+.likely
+  .likely__widget
+    color: #000
+    background: rgba(231, 231, 231, 0.8)
+  .likely__counter
+    background-size: 1px 1px
+    background-repeat: repeat-y
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0) 0.5px, rgba(0, 0, 0, 0) 100%)
+
+.likely-light
+  .likely__widget
+    color: #fff
+    fill: #fff
+    background: rgba(236, 236, 236, 0.16)
+    text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+  .likely__counter
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4) 0, rgba(255, 255, 255, 0) 0.5px, rgba(255, 255, 255, 0) 100%)
+
+.likely__widget_facebook
+  fill: #425497
+  &:active, &:focus, &:hover
+    background: rgba(207, 212, 229, 0.8)
+
+@media (hover: none)
+  .likely__widget_facebook
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_facebook
+  &:active, &:focus, &:hover
+    text-shadow: #425497 0 0 .25em
+    background: rgba(66, 84, 151, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_facebook
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_gplus
+  fill: #dd4241
+  &:active, &:focus, &:hover
+    background: rgba(246, 207, 207, 0.8)
+
+@media (hover: none)
+  .likely__widget_gplus
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_gplus
+  &:active, &:focus, &:hover
+    text-shadow: #dd4241 0 0 .25em
+    background: rgba(221, 66, 65, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_gplus
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_linkedin
+  fill: #0077b5
+  &:active, &:focus, &:hover
+    background: rgba(191, 221, 236, 0.8)
+
+@media (hover: none)
+  .likely__widget_linkedin
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_linkedin
+  &:active, &:focus, &:hover
+    text-shadow: #0077b5 0 0 .25em
+    background: rgba(0, 119, 181, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_linkedin
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_odnoklassniki
+  fill: #f6903b
+  &:active, &:focus, &:hover
+    background: rgba(252, 227, 206, 0.8)
+
+@media (hover: none)
+  .likely__widget_odnoklassniki
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_odnoklassniki
+  &:active, &:focus, &:hover
+    text-shadow: #f6903b 0 0 .25em
+    background: rgba(246, 144, 59, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_odnoklassniki
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_pinterest
+  fill: #bd081c
+  &:active, &:focus, &:hover
+    background: rgba(238, 193, 198, 0.8)
+
+@media (hover: none)
+  .likely__widget_pinterest
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_pinterest
+  &:active, &:focus, &:hover
+    text-shadow: #bd081c 0 0 .25em
+    background: rgba(189, 8, 28, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_pinterest
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_telegram
+  fill: #34abde
+  &:active, &:focus, &:hover
+    background: rgba(204, 234, 246, 0.8)
+
+@media (hover: none)
+  .likely__widget_telegram
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_telegram
+  &:active, &:focus, &:hover
+    text-shadow: #34abde 0 0 .25em
+    background: rgba(52, 171, 222, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_telegram
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_twitter
+  fill: #00b7ec
+  &:active, &:focus, &:hover
+    background: rgba(191, 237, 250, 0.8)
+
+@media (hover: none)
+  .likely__widget_twitter
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_twitter
+  &:active, &:focus, &:hover
+    text-shadow: #00b7ec 0 0 .25em
+    background: rgba(0, 183, 236, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_twitter
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_vkontakte
+  fill: #526e8f
+  &:active, &:focus, &:hover
+    background: rgba(211, 218, 227, 0.8)
+
+@media (hover: none)
+  .likely__widget_vkontakte
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_vkontakte
+  &:active, &:focus, &:hover
+    text-shadow: #526e8f 0 0 .25em
+    background: rgba(82, 110, 143, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_vkontakte
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely__widget_whatsapp
+  fill: #25d366
+  &:active, &:focus, &:hover
+    background: rgba(200, 244, 216, 0.8)
+
+@media (hover: none)
+  .likely__widget_whatsapp
+    &:active, &:focus, &:hover
+      background: rgba(231, 231, 231, 0.8)
+
+.likely-light .likely__widget_whatsapp
+  &:active, &:focus, &:hover
+    text-shadow: #25d366 0 0 .25em
+    background: rgba(37, 211, 102, 0.7)
+
+@media (hover: none)
+  .likely-light .likely__widget_whatsapp
+    &:active, &:focus, &:hover
+      text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.33em
+      background: rgba(236, 236, 236, 0.16)
+
+.likely
+  margin: 0 -5px -10px
+  .likely__widget
+    line-height: 20px
+    font-size: 14px
+    border-radius: 3px
+    height: 22px
+    margin: 0 5px 10px
+  .likely__icon
+    width: 22px
+    height: 22px
+  .likely__button
+    padding: 1px 4px 1px 0
+  .likely__counter
+    padding: 1px 4px
+
+.likely-big
+  margin: 0 -6px -12px
+  .likely__widget
+    line-height: 28px
+    font-size: 18px
+    border-radius: 4px
+    height: 32px
+    margin: 0 6px 12px
+  .likely__icon
+    width: 32px
+    height: 32px
+  .likely__button
+    padding: 2px 6px 2px 0
+  .likely__counter
+    padding: 2px 6px
+  svg
+    left: 4px
+    top: 4px
+    width: 24px
+    height: 24px
+
+.likely-small
+  margin: 0 -4px -8px
+  .likely__widget
+    line-height: 14px
+    font-size: 12px
+    border-radius: 2px
+    height: 18px
+    margin: 0 4px 8px
+  .likely__icon
+    width: 18px
+    height: 18px
+  .likely__button
+    padding: 2px 3px 2px 0
+  .likely__counter
+    padding: 2px 3px
+  svg
+    left: 3px
+    top: 3px
+    width: 12px
+    height: 12px
+
+
+
+
+
+
+//likely custom
+
+.likely
+  .likely__widget 
+    line-height: 20px
+    font-size: 16px
+    border-radius: 0px
+
+.likely-custom
+	.likely__button
+		padding-left: 5px
+	> div
+		padding: 2px 10px
+		position: relative
+		cursor: pointer
+		margin: 8px 2px 0
+		border: 1px solid #fff
+		border-radius: 0px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.latest-comments
+  font-size: 14px
+  text-align: left
+  //color: #333333
+  //padding: 10px
+  //border: 1px solid #eee
+  line-height: 1.45
+
+.dsq-widget-list
+  margin: 0
+  padding: 0
+  //ackground-color: #f8f8f8
+.dsq-widget-item
+  margin: 0
+  padding: 0 0 10px 0
+  border-bottom: 1px solid #eee
+  position: relative
+  padding-left: 40px
+  p.dsq-widget-meta
+    position: relative
+    margin-top: 0px
+    font-size: 12px
+    &::before
+      content: '→'
+      left: 0
+      color: #333
+      margin-right: 5px
+  .dsq-widget-avatar
+    position: absolute
+    left: 0
+  &:last-child
+    border-bottom: none
+.dsq-widget-user
+  &::after
+    content: ':'
+
+
+
+
+
+
+
+
+
+
+
+@import _media.sass

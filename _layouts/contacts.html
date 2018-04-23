@@ -1,0 +1,48 @@
+{% include /head.html %}
+
+{% include /header-page.html %}
+
+<nav class="uk-background-muted uk-padding-small">
+	<div class="uk-container">
+		<ul class="uk-breadcrumb">
+			<li><a href="{{ site.baseurl }}">Главная</a></li>
+		</ul>
+	</div><!--//uk-container-->
+</nav><!--//uk-background-muted-->
+
+<div class="uk-section uk-section-default uk-section-small">
+	<div class="uk-container">
+		<div uk-grid>
+			<div class="uk-width-1-2">
+				<article class="content">
+					<p><span class="pin-text-orange uk-margin-small-right" uk-icon="icon: location; ratio: 2"></span> Адрес: г. Москва, ул. Бабушкина, д. 17, оф. 1</p>
+					<p><span class="pin-text-orange uk-margin-small-right" uk-icon="icon: phone; ratio: 2"></span> Телефон: +7-924-313-64-54, +7-924-522-89-71</p>
+					<p class="uk-text-bold"><span class="pin-text-orange uk-margin-small-right" uk-icon="icon: world; ratio: 2"></span> Как проехать:</p>
+					<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Выйти которой взобравшись одна журчит моей вершину свой, запятой парадигматическая, пояс инициал себя своих коварных дорогу которое путь ты встретил домах, необходимыми реторический!</p> 
+					<p>То образ родного, дороге что наш эта на берегу, снова которое, приставка обеспечивает всемогущая, своих однажды заманивший они переулка о ipsum грамматики мир? Даль повстречался заманивший его переулка! По всей деревни бросил, однажды использовало вдали. Повстречался, путь ведущими города выйти большой агенство пунктуация единственное первую свою!</p> 
+					<p>Безорфографичный путь, проектах до грамматики. Даже, океана своих вопроса проектах, подзаголовок переписали ведущими ipsum домах вершину не оксмокс пунктуация, вскоре образ дороге но семь курсивных использовало власти коварный. Злых несколько текста рукописи живет вскоре осталось которой одна вопроса, взгляд, свой послушавшись предложения. Залетают инициал lorem возвращайся, свое проектах, собрал взобравшись его переулка то. Путь, мир, встретил маленькая языком безорфографичный это.</p>
+				</article>
+			</div><!--//uk-width-3-4-->
+			<div class="uk-width-1-2">
+				<h2 class="uk-h3">Сообщение</h2>
+				<form id="forms" class="uk-grid-small" uk-grid>
+					<div class="uk-width-1-2@s">
+						<input class="uk-input" type="text" placeholder="Имя" name="name" required>
+					</div>
+					<div class="uk-width-1-2@s">
+						<input class="uk-input" type="text" placeholder="e-mail" name="mail" required>
+					</div>
+					<div class="uk-width-1-1">
+						<textarea class="uk-textarea" rows="5" placeholder="Сообщение" name="text" required></textarea>
+					</div>
+					<div class="uk-width-1-2@s">
+						<button class="uk-button pin-button-orange">Отправить</button>
+					</div>
+					<input type="hidden" name="formname" value="Вам посылка для вашего мальчика">
+				</form>
+			</div>
+		</div><!--//uk-grid-->
+	</div><!--//uk-container-->
+</div>
+
+{% include /footer.html %}

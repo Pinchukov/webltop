@@ -1,0 +1,248 @@
+<section class="uk-section uk-section-small uk-section-default">
+
+<!--//BANNER_1-->
+{% include /ad-type-1.html %}
+<!--//BANNER_1 END-->
+
+  <div class="uk-container">
+    <header class="pin-header">
+      <h2 class="uk-heading-bullet"><a class="pin-text-orange" href="electronics" uk-tooltip="Перейти в рубрику">Электроника</a></h2>
+    </header>
+    <div class="uk-grid-collapse uk-child-width-1-2@s" uk-grid>
+
+      {% for post in site.categories.electronics limit: 2 offset: 0 %}
+      <div>
+        <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large pin-media">
+          <div class="uk-card-media-top">
+            <div class="uk-inline uk-overflow-hidden">
+              <img src="{{ post.image }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+              <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+                <h3 class="uk-h4"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+              </div>
+              <div class="uk-position-top-right uk-padding-small">
+               <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+             </div>
+             <div class="uk-position-top-left uk-padding-small pin-text-white item-comments" uk-tooltip="Колличество комментариев">
+              <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+            </div>
+          </div><!--//uk-inline-->
+        </div><!--//uk-card-media-top-->
+      </div>
+    </div>
+    {% endfor %}
+  </div><!--//uk-grid-->
+
+  <div class="uk-grid-collapse uk-child-width-1-3@s" uk-grid>
+    {% for post in site.categories.electronics limit: 3 offset: 2 %}
+    <div>
+      <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large">
+        <div class="uk-card-media-top">
+          <div class="uk-inline uk-overflow-hidden">
+            <img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+              <h3 class="uk-h5"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+            </div>
+            <div class="uk-position-top-right uk-padding-small">
+             <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+           </div>
+           <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+            <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+          </div>
+        </div><!--//uk-inline-->
+      </div><!--//uk-card-media-top-->
+    </div>
+  </div>
+  {% endfor %}
+</div><!--//uk-grid-->
+<footer class="uk-margin-top">
+  <a class="uk-button pin-button-orange" href="electronics" uk-tooltip="Всё публикации">Перейти в рубрику</a>
+</footer>
+</div><!--//uk-container-->
+</section>
+
+
+<section class="uk-section uk-section-small uk-section-muted">
+  <div class="uk-container">
+    <header class="pin-header">
+      <h2 class="uk-heading-bullet"><a class="pin-text-orange" href="it-news" uk-tooltip="Перейти в рубрику">Новости IT</a></h2>
+    </header>
+    <div uk-grid>
+      <div class="uk-width-2-3@s">
+        <div class="uk-child-width-1-2@m" uk-grid>
+          {% for post in site.categories.it-news limit: 4 %}
+          <div>
+            <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large">
+              <div class="uk-card-media-top">
+                <div class="uk-inline uk-overflow-hidden">
+                  <img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                  <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+                    <h3 class="uk-h5"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                  </div>
+                  <div class="uk-position-top-right uk-padding-small">
+                   <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+                 </div>
+                 <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+                  <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+                </div>
+              </div><!--//uk-inline-->
+            </div><!--//uk-card-media-top-->
+          </div>
+        </div>
+        {% endfor %}
+      </div><!--//uk-grid-->
+      <footer class="uk-margin-top">
+        <a class="uk-button pin-button-orange" href="it-news" uk-tooltip="Всё публикации">Перейти в рубрику</a>
+      </footer>
+    </div><!--//uk-width-2-3-->
+    <div class="uk-width-1-3@s">
+      <aside class="pin-sidebar">
+<!--//BANNER_2-->
+{% include /ad-type-2.html %}
+<!--//BANNER_2 END-->
+<!--
+{% include /disqus_comments_sidebar.html %}
+-->
+      </aside>
+    </div><!--//uk-width-1-3-->
+  </div><!--//uk-grid-->
+</div><!--//uk-container-->
+</section>
+
+
+<section class="uk-section uk-section-small uk-section-secondary">
+  <div class="uk-container">
+    <header class="pin-header">
+      <h2 class="uk-heading-bullet"><a class="pin-text-white" href="reviews" uk-tooltip="Перейти в рубрику">Обзоры</a></h2>
+    </header>
+    <div class="uk-child-width-1-3@m uk-child-width-1-2@s" uk-grid>
+      {% for post in site.categories.reviews limit: 3 %}
+      <div>
+        <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large">
+          <div class="uk-card-media-top">
+            <div class="uk-inline uk-overflow-hidden">
+              <img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+              <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+                <h3 class="uk-h5"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+              </div>
+              <div class="uk-position-top-right uk-padding-small">
+               <span class="uk-label pin-background-orange pin-text-white" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+             </div>
+             <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+              <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+            </div>
+          </div><!--//uk-inline-->
+        </div><!--//uk-card-media-top-->
+      </div>
+    </div>
+    {% endfor %}
+  </div><!--//uk-grid-->
+  <footer class="uk-margin-top">
+    <a class="uk-button pin-button-orange" href="reviews" uk-tooltip="Всё публикации">Перейти в рубрику</a>
+  </footer>
+</div><!--//uk-container-->
+</section>
+
+
+<section class="uk-section uk-section-small uk-section-default">
+  <div class="uk-container">
+    <header class="pin-header">
+     <h2 class="uk-heading-bullet"><a class="pin-text-orange" href="lifehacks" uk-tooltip="Перейти в рубрику">Лайфхаки</a></h2>
+   </header>
+   <div uk-grid>
+      <div class="uk-width-2-3@s">
+        <div class="uk-child-width-1-2@m" uk-grid>
+        {% for post in site.categories.lifehacks limit: 4 %}
+        <div>
+          <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large">
+            <div class="uk-card-media-top">
+              <div class="uk-inline uk-overflow-hidden">
+                <img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+                  <h3 class="uk-h5"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                </div>
+                <div class="uk-position-top-right uk-padding-small">
+                 <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+               </div>
+               <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+                <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+              </div>
+            </div><!--//uk-inline-->
+          </div><!--//uk-card-media-top-->
+        </div>
+      </div>
+      {% endfor %}
+    </div><!--//uk-grid-->
+    <footer class="uk-margin-top">
+      <a class="uk-button pin-button-orange" href="lifehacks" uk-tooltip="Всё публикации">Перейти в рубрику</a>
+    </footer>
+  </div><!--//uk-width-2-3-->
+  <div class="uk-width-1-3@s">
+    <aside class="pin-sidebar">
+      {% include /disqus_comments_sidebar.html %}
+    </aside>
+  </div><!--//uk-width-1-3-->
+</div><!--//uk-grid-->
+</div><!--//uk-container-->
+</section>
+
+
+<section class="uk-section uk-section-small uk-section-muted">
+  <div class="uk-container">
+    <header class="pin-header">
+      <h2 class="uk-heading-bullet"><a class="pin-text-orange" href="diy" uk-tooltip="Перейти в рубрику">DIY</a></h2>
+    </header>
+    <div class="uk-grid-collapse" uk-grid>
+    
+      <div class="uk-width-2-3@s">
+        <div class="uk-child-width-1-1" uk-grid>
+          {% for post in site.categories.diy limit: 1 offset: 0 %}
+          <div>
+            <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large pin-media">
+              <div class="uk-card-media-top">
+                <div class="uk-inline uk-overflow-hidden">
+                  <img src="{{ post.image }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+                  <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+                    <h3 class="uk-h3"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+                  </div>
+                  <div class="uk-position-top-right uk-padding-small">
+                   <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+                 </div>
+                 <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+                  <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+                </div>
+              </div><!--//uk-inline-->
+            </div><!--//uk-card-media-top-->
+          </div><!--//uk-card-->
+        </div>
+        {% endfor %}
+      </div><!--//uk-grid-->
+    </div><!--//uk-width-2-3-->
+
+    <div class="uk-width-1-3@s">
+     {% for post in site.categories.diy limit: 2 offset: 1 %}
+     <div>
+      <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large">
+        <div class="uk-card-media-top">
+          <div class="uk-inline uk-overflow-hidden">
+            <img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
+              <h3 class="uk-h5"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+            </div>
+            <div class="uk-position-top-right uk-padding-small">
+             <span class="uk-label pin-background-orange pin-text-white" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
+           </div>
+           <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+            <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
+          </div>
+        </div><!--//uk-inline-->
+      </div><!--//uk-card-media-top-->
+    </div>
+  </div>
+  {% endfor %}
+</div><!--//uk-width-1-3-->
+</div><!--//uk-grid-->
+<footer class="uk-margin-top">
+  <a class="uk-button pin-button-orange" href="diy" uk-tooltip="Всё публикации">Перейти в рубрику</a>
+</footer>
+</div><!--//uk-container-->
+</section>
