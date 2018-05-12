@@ -1,4 +1,5 @@
 <header class="uk-header uk-background-default">
+	
 {% include /header-top.html %}
 
 	<div class="uk-background-blend-soft-light uk-background-secondary uk-background-cover uk-padding-large pin-media" uk-parallax="bgy: -200" style="background-image: url({{ page.image }});">
@@ -12,13 +13,13 @@
 					<h1 class="uk-h2 uk-margin-small pin-text-white">{{ page.title }}</h1>
 					<div class="item-social uk-flex uk-text-small uk-margin-top uk-visible@m">
 						<div class="item-comments uk-margin-small-right" title="Количество комментариев">
-							<span class="uk-margin-small-right" uk-icon="icon: comments"></span>Комментариев: <a class="pin-link-white tdn animation-2s" href="{{ page.url }}#disqus_thread" uk-tooltip="Колличество комментариев"></a>
+							<span class="uk-margin-small-right" uk-icon="icon: comments"></span>Комментариев: <a class="pin-link-white tdn animation-2s" href="{{ page.url }}#disqus_thread" uk-tooltip="Количество комментариев"></a>
 						</div>
-						<div class="uk-margin-small-right uk-flex uk-flex-middle" uk-icon="icon: social" uk-tooltip="Поделиться в соц. сетях"></div>
-						<div class="uk-flex" data-url="{{ site.url }}{{ page.url }}" data-media="{{ site.url }}/{{ page.image }}" data-title="{{ page.title }}">
-							<div class="vkontakte pin-button-small uk-margin-small-right" uk-tooltip="Поделиться Вконтакте">Вконтакте</div>
-							<div class="facebook pin-button-small uk-margin-small-right" uk-tooltip="Поделиться в Facebook">Facebook</div>
-							<div class="twitter pin-button-small uk-margin-small-right" uk-tooltip="Поделиться в Twitter">Twitter</div>
+						<div class="uk-margin-small-right uk-flex uk-flex-middle" uk-icon="icon: social" uk-tooltip="Поделиться в соц. сетях"></div>		
+						<div class="uk-flex likely likely-custom-header" data-url="{{ site.url }}{{ page.url }}" data-media="{{ page.thumb }}" data-title="{{ page.title }}">
+							<div class="vkontakte" uk-tooltip="Поделиться Вконтакте">Вконтакте</div>
+							<div class="facebook" uk-tooltip="Поделиться в Facebook">Facebook</div>
+							<div class="twitter" uk-tooltip="Поделиться в Twitter">Twitter</div>
 						</div>
 					</div><!--//item-social-->
 				</div>

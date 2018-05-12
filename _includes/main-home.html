@@ -9,20 +9,19 @@
       <h2 class="uk-heading-bullet"><a class="pin-text-orange" href="electronics" uk-tooltip="Перейти в рубрику">Электроника</a></h2>
     </header>
     <div class="uk-grid-collapse uk-child-width-1-2@s" uk-grid>
-
       {% for post in site.categories.electronics limit: 2 offset: 0 %}
       <div>
         <div class="uk-card uk-card-default uk-card-small uk-box-shadow-small uk-box-shadow-hover-large pin-media">
           <div class="uk-card-media-top">
             <div class="uk-inline uk-overflow-hidden">
-              <img src="{{ post.image }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
+              <img src="{{ post.thumb }}" alt="{{ post.title }}" uk-scrollspy="cls: uk-animation-kenburns; repeat: true">
               <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-padding-small">
                 <h3 class="uk-h4"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
               </div>
               <div class="uk-position-top-right uk-padding-small">
                <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
              </div>
-             <div class="uk-position-top-left uk-padding-small pin-text-white item-comments" uk-tooltip="Колличество комментариев">
+             <div class="uk-position-top-left uk-padding-small pin-text-white item-comments" uk-tooltip="Количество комментариев">
               <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
             </div>
           </div><!--//uk-inline-->
@@ -45,7 +44,7 @@
             <div class="uk-position-top-right uk-padding-small">
              <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
            </div>
-           <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+           <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Количество комментариев">
             <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
           </div>
         </div><!--//uk-inline-->
@@ -81,7 +80,7 @@
                   <div class="uk-position-top-right uk-padding-small">
                    <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
                  </div>
-                 <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+                 <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Количество комментариев">
                   <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
                 </div>
               </div><!--//uk-inline-->
@@ -96,6 +95,7 @@
     </div><!--//uk-width-2-3-->
     <div class="uk-width-1-3@s">
       <aside class="pin-sidebar">
+
 <!--//BANNER_2-->
 {% include /ad-type-2.html %}
 <!--//BANNER_2 END-->
@@ -127,7 +127,7 @@
               <div class="uk-position-top-right uk-padding-small">
                <span class="uk-label pin-background-orange pin-text-white" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
              </div>
-             <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+             <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Количество комментариев">
               <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
             </div>
           </div><!--//uk-inline-->
@@ -163,7 +163,7 @@
                 <div class="uk-position-top-right uk-padding-small">
                  <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
                </div>
-               <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+               <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Количество комментариев">
                 <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
               </div>
             </div><!--//uk-inline-->
@@ -207,7 +207,7 @@
                   <div class="uk-position-top-right uk-padding-small">
                    <span class="uk-label pin-background-orange" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
                  </div>
-                 <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+                 <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Количество комментариев">
                   <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
                 </div>
               </div><!--//uk-inline-->
@@ -231,7 +231,7 @@
             <div class="uk-position-top-right uk-padding-small">
              <span class="uk-label pin-background-orange pin-text-white" uk-tooltip="Дата публикации">{{ post.date | date: '%d' }}/{{ post.date | date: '%m' }}/{{ post.date | date: '%Y' }}</span>
            </div>
-           <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Колличество комментариев">
+           <div class="uk-position-top-left uk-padding-small pin-text-white" uk-tooltip="Количество комментариев">
             <span class="uk-margin-small-right" uk-icon="icon: comments"></span><a class="pin-link-white tdn animation-2s" href="{{ post.url }}#disqus_thread"></a>
           </div>
         </div><!--//uk-inline-->

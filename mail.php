@@ -1,6 +1,6 @@
 <?php
 $frm_name  = "WeblTOP";
-$recepient = "info@dvgid.ru";
+$recepient = "name@domain.com";
 $sitename  = "WeblTOP";
 $subject   = "Новое сообщение с вашего сайта \"$sitename\"";
 

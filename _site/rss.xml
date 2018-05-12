@@ -3,117 +3,117 @@
 	<channel>
 		<title>WeblTOP</title>
 		<description>Новости электроники, технологий, современных гаджетов, и другая актуальная информация современной IT индустрии</description>
-		<link>http://localhost:4000</link>
-		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		<link>https://webltop.ru</link>
+		<atom:link href="https://webltop.ru/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Как выбрать размер диагонали ТВ 2</title>
+				<title>Microsoft окончательно похоронила Windows Phone, это конец...</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/lifehacks/kak-vybrat-razmer-diagonali-tv2.html"><img width="100%" src="http://localhost:4000images/lifehacks/2018/2018-01-01-kak-vybrat-razmer-diagonali-tv/1.jpg"></a>
-					Изображение, позволяющее выбрать диагональ ТВ 2
+					<a href="https://webltop.ru/it-news/windows-phone-death.html"><img width="100%" src="https://webltop.ruimages/it-news/2018/2018-02-05-windows-phone-death/1.jpg"></a>
+					Старший менеджер программы Windows Insider Брэндон Леблан заявил, что корпорация не планирует выпускать тестовые версии системы Windows 10 Mobile
 					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/lifehacks/kak-vybrat-razmer-diagonali-tv2.html</link>
-				<guid isPermaLink="true">http://localhost:4000/lifehacks/kak-vybrat-razmer-diagonali-tv2.html</guid>
+				<pubDate>Mon, 05 Feb 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/it-news/windows-phone-death.html</link>
+				<guid isPermaLink="true">https://webltop.ru/it-news/windows-phone-death.html</guid>
 			</item>
 		
 			<item>
-				<title>Jonsbo готовит белую версию процессорного кулера CR-301-2</title>
+				<title>Leap Motion представила открытую платформу дополненной реальности</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/it-news/jonsbo-gotovit-beluyu-versiyu-processornogo-kulera2.html"><img width="100%" src="http://localhost:4000images/it-news/2018/2018-01-01-jonsbo-gotovit-beluyu-versiyu-processornogo-kulera/1.jpg"></a>
-					Компания Jonsbo сообщает, что планирует выпустить новый процессорный кулер CR-301-2
+					<a href="https://webltop.ru/it-news/leap-motion.html"><img width="100%" src="https://webltop.ruimages/it-news/2018/2018-02-04-leap-motion/1.jpg"></a>
+					Компания Leap Motion объявила о создании программно-аппаратной платформы для разработки шлемов дополненной реальности.
 					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/it-news/jonsbo-gotovit-beluyu-versiyu-processornogo-kulera2.html</link>
-				<guid isPermaLink="true">http://localhost:4000/it-news/jonsbo-gotovit-beluyu-versiyu-processornogo-kulera2.html</guid>
+				<pubDate>Sun, 04 Feb 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/it-news/leap-motion.html</link>
+				<guid isPermaLink="true">https://webltop.ru/it-news/leap-motion.html</guid>
 			</item>
 		
 			<item>
-				<title>Игровые периферийные устройства и аксессуары линейки M800 от Cooler Master 2</title>
+				<title>Искусственный интеллект назвали угрозой ядерной стабильности</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/it-news/igrovye-periferijnye-ustrojstva-i-aksessuary2.html"><img width="100%" src="http://localhost:4000images/it-news/2018/2018-01-18-igrovye-periferijnye-ustrojstva-i-aksessuary/1.jpg"></a>
-					На проходящей в эти дни выставке CES 2018 Cooler Master представила игровые периферийные устройства и аксессуары линейки M800-2
+					<a href="https://webltop.ru/it-news/artificial-intelligence-called-the-threat.html"><img width="100%" src="https://webltop.ruimages/it-news/2018/2018-02-03-artificial-intelligence-called-the-threat/1.jpg"></a>
+					К 2040 году может подорвать ядерную стабильность и нивелировать стратегию ядерного сдерживания.
 					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/it-news/igrovye-periferijnye-ustrojstva-i-aksessuary2.html</link>
-				<guid isPermaLink="true">http://localhost:4000/it-news/igrovye-periferijnye-ustrojstva-i-aksessuary2.html</guid>
+				<pubDate>Sat, 03 Feb 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/it-news/artificial-intelligence-called-the-threat.html</link>
+				<guid isPermaLink="true">https://webltop.ru/it-news/artificial-intelligence-called-the-threat.html</guid>
 			</item>
 		
 			<item>
-				<title>Игровую мышь SteelSeries Rival 600 оборудовали двумя оптическими сенсорами 2</title>
+				<title>Microsoft представила ноутбуки на ARM-процессорах под управлением Windows 10</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/it-news/igrovuyu-mysh-steelseries-rival-600-2.html"><img width="100%" src="http://localhost:4000images/it-news/2018/2018-01-04-igrovuyu-mysh-steelseries-rival-600/1.jpg"></a>
-					На выставке CES 2018 была анонсирована новая мышь SteelSeries Rival 600 с двумя оптическими сенсорами для большей точности 2
+					<a href="https://webltop.ru/electronics/laptops-on-arm-processors-win10.html"><img width="100%" src="https://webltop.ruimages/electronics/2018/2018-02-02-laptops-on-arm-processors-win10/1.jpg"></a>
+					Практически все современные стационарные компьютеры, ноутбуки и серверы используют процессоры на архитектуре x86.
 					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/it-news/igrovuyu-mysh-steelseries-rival-600-2.html</link>
-				<guid isPermaLink="true">http://localhost:4000/it-news/igrovuyu-mysh-steelseries-rival-600-2.html</guid>
+				<pubDate>Fri, 02 Feb 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/electronics/laptops-on-arm-processors-win10.html</link>
+				<guid isPermaLink="true">https://webltop.ru/electronics/laptops-on-arm-processors-win10.html</guid>
 			</item>
 		
 			<item>
-				<title>TFT-дисплеи Winstar: новинки, характеристики и особенности подключения</title>
+				<title>Intel показала умные очки Vaunt. Они похожи на обычные</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/electronics/tft-displei-winstar3.html"><img width="100%" src="http://localhost:4000images/electronics/2018/2018-01-02-tft-displei-winstar-novinki-harakteristiki-i-osobennosti-podklyucheniya/1.jpg"></a>
-					Компания Winstar Display представила новинку, заявив о расширении линейки своих TFT мониторов 2
+					<a href="https://webltop.ru/electronics/smart-vaunt-glasses.html"><img width="100%" src="https://webltop.ruimages/electronics/2018/2018-02-01-smart-vaunt-glasses/1.jpg"></a>
+					В очках или шлемах дополненной реальности пользователь видит не полностью виртуальное изображение, а лишь некоторые объекты, наложенные на реальный окружающий мир.
 					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/electronics/tft-displei-winstar3.html</link>
-				<guid isPermaLink="true">http://localhost:4000/electronics/tft-displei-winstar3.html</guid>
-			</item>
-		
-			<item>
-				<title>Создан прототип энергонезависимой памяти для волитроники 2</title>
-				<description><![CDATA[
-					<a href="http://localhost:4000/electronics/sozdan-prototip-energonezavisimoj-pamyati2.html"><img width="100%" src="http://localhost:4000images/electronics/2018/2018-01-06-sozdan-prototip-energonezavisimoj-pamyati/1.jpg"></a>
-					Ученые из Университета штата Нью-Йорк создали инновационный способ разделения электронов 2
-					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/electronics/sozdan-prototip-energonezavisimoj-pamyati2.html</link>
-				<guid isPermaLink="true">http://localhost:4000/electronics/sozdan-prototip-energonezavisimoj-pamyati2.html</guid>
-			</item>
-		
-			<item>
-				<title>Китайский квантовый вычислитель «обогнал» первый компьютер человечества 2</title>
-				<description><![CDATA[
-					<a href="http://localhost:4000/electronics/kitajskij-kvantovyj-vychislitel2.html"><img width="100%" src="http://localhost:4000images/electronics/2018/2018-01-07-kitajskij-kvantovyj-vychislitel/1.jpg"></a>
-					Китайские физики снова удивляют. Усовершенствовав работу бозонного сэмплера, они добились превосходства перед предыдущими результатами 2
-					]]></description>
-				<pubDate>Tue, 30 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/electronics/kitajskij-kvantovyj-vychislitel2.html</link>
-				<guid isPermaLink="true">http://localhost:4000/electronics/kitajskij-kvantovyj-vychislitel2.html</guid>
+				<pubDate>Thu, 01 Feb 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/electronics/smart-vaunt-glasses.html</link>
+				<guid isPermaLink="true">https://webltop.ru/electronics/smart-vaunt-glasses.html</guid>
 			</item>
 		
 			<item>
 				<title>Обзор яркой игровой клавиатуры ASUS ROG Claymore с механическими переключателями</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/reviews/obzor-igrovoj-klaviatury-asus-rog-claymore.html"><img width="100%" src="http://localhost:4000images/reviews/2018/2018-01-21-obzor-igrovoj-klaviatury-asus-rog-claymore/1.jpg"></a>
+					<a href="https://webltop.ru/reviews/obzor-igrovoj-klaviatury-asus-rog-claymore.html"><img width="100%" src="https://webltop.ruimages/reviews/2018/2018-01-21-obzor-igrovoj-klaviatury-asus-rog-claymore/1.jpg"></a>
 					Компания ASUS выпустила новую игровую клавиатуру ASUS ROG Claymore - интереснейшее творение компании.
 					]]></description>
 				<pubDate>Sun, 21 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/reviews/obzor-igrovoj-klaviatury-asus-rog-claymore.html</link>
-				<guid isPermaLink="true">http://localhost:4000/reviews/obzor-igrovoj-klaviatury-asus-rog-claymore.html</guid>
+				<link>https://webltop.ru/reviews/obzor-igrovoj-klaviatury-asus-rog-claymore.html</link>
+				<guid isPermaLink="true">https://webltop.ru/reviews/obzor-igrovoj-klaviatury-asus-rog-claymore.html</guid>
 			</item>
 		
 			<item>
 				<title>Графеновые наушники собрали более сотни тысяч долларов на Kickstarter</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/electronics/grafenovye-naushniki-sobrali-dengi-na-kickstarter.html"><img width="100%" src="http://localhost:4000images/electronics/2018/2018-01-21-grafenovye-naushniki-sobrali-dengi-na-kickstarter/1.jpg"></a>
-					Поразительная новость - Графеновые наушники собрали более сотни тысяч долларов на Kickstarter
+					<a href="https://webltop.ru/electronics/grafenovye-naushniki-sobrali-dengi-na-kickstarter.html"><img width="100%" src="https://webltop.ruimages/electronics/2018/2018-01-21-grafenovye-naushniki-sobrali-dengi-na-kickstarter/1.jpg"></a>
+					Несмотря на то, что графен был открыт в 2004 году, и с тех пор стал одним из самых изучаемых материалов, в практических устройствах его начали применять лишь в последние годы.
 					]]></description>
 				<pubDate>Sun, 21 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/electronics/grafenovye-naushniki-sobrali-dengi-na-kickstarter.html</link>
-				<guid isPermaLink="true">http://localhost:4000/electronics/grafenovye-naushniki-sobrali-dengi-na-kickstarter.html</guid>
+				<link>https://webltop.ru/electronics/grafenovye-naushniki-sobrali-dengi-na-kickstarter.html</link>
+				<guid isPermaLink="true">https://webltop.ru/electronics/grafenovye-naushniki-sobrali-dengi-na-kickstarter.html</guid>
 			</item>
 		
 			<item>
 				<title>Вскоре выйдет новая камера для Raspberry Pi, которая будет стоить $25</title>
 				<description><![CDATA[
-					<a href="http://localhost:4000/diy/novaya-kamera-dlya-raspberry-pi.html"><img width="100%" src="http://localhost:4000images/diy/2018/2018-01-20-novaya-kamera-dlya-raspberry-pi/1.jpg"></a>
+					<a href="https://webltop.ru/diy/novaya-kamera-dlya-raspberry-pi.html"><img width="100%" src="https://webltop.ruimages/diy/2018/2018-01-20-novaya-kamera-dlya-raspberry-pi/1.jpg"></a>
 					Вышла новая камера для Raspberry Pi, которая должна поступить в продажу уже в ближайшее время.
 					]]></description>
 				<pubDate>Sat, 20 Jan 2018 00:00:00 +1000</pubDate>
-				<link>http://localhost:4000/diy/novaya-kamera-dlya-raspberry-pi.html</link>
-				<guid isPermaLink="true">http://localhost:4000/diy/novaya-kamera-dlya-raspberry-pi.html</guid>
+				<link>https://webltop.ru/diy/novaya-kamera-dlya-raspberry-pi.html</link>
+				<guid isPermaLink="true">https://webltop.ru/diy/novaya-kamera-dlya-raspberry-pi.html</guid>
+			</item>
+		
+			<item>
+				<title>10 удобных решений, хитростей и приемов для использования планшета</title>
+				<description><![CDATA[
+					<a href="https://webltop.ru/lifehacks/10-udobnyh-reshenij-dlya-ispolzovaniya-plansheta.html"><img width="100%" src="https://webltop.ruimages/lifehacks/2018/2018-01-20-10-udobnyh-reshenij-dlya-ispolzovaniya-plansheta/1.jpg"></a>
+					10 лайфхаков помогут приручить самый строптивый планшет и направят все его ресурсы в русло пользы.
+					]]></description>
+				<pubDate>Sat, 20 Jan 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/lifehacks/10-udobnyh-reshenij-dlya-ispolzovaniya-plansheta.html</link>
+				<guid isPermaLink="true">https://webltop.ru/lifehacks/10-udobnyh-reshenij-dlya-ispolzovaniya-plansheta.html</guid>
+			</item>
+		
+			<item>
+				<title>HyperX Predator DDR4 RGB с синхронизацией подсветки через ИК</title>
+				<description><![CDATA[
+					<a href="https://webltop.ru/it-news/hyperx-predator-ddr4-rgb-s-sinhronizaciej-podsvetki.html"><img width="100%" src="https://webltop.ruimages/it-news/2018/2018-01-20-hyperx-predator-ddr4-rgb-s-sinhronizaciej-podsvetki/1.jpg"></a>
+					HyperX показала модули памяти серии Predator DDR4 RGB с синхронизацией подсветки через ИК-приемник
+					]]></description>
+				<pubDate>Sat, 20 Jan 2018 00:00:00 +1000</pubDate>
+				<link>https://webltop.ru/it-news/hyperx-predator-ddr4-rgb-s-sinhronizaciej-podsvetki.html</link>
+				<guid isPermaLink="true">https://webltop.ru/it-news/hyperx-predator-ddr4-rgb-s-sinhronizaciej-podsvetki.html</guid>
 			</item>
 		
 	</channel>

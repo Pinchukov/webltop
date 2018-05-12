@@ -4,7 +4,7 @@ description: Новости электроники, технологий, сов
 
 themecolor: '#202225'
 imagehome: images/webltop.jpg
-url: 'http://webltop.ru'
+url: 'https://webltop.ru'
 baseurl: '/'
 
 plugins: [jekyll-paginate-v2]

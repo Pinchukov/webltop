@@ -9,7 +9,7 @@ RewriteEngine On
 
 RewriteCond %{HTTP_HOST} .
 RewriteCond %{HTTP_HOST} www.webltop.ru [NC]
-RewriteRule (.*) http://webltop.ru/$1 [R=301,L]
+RewriteRule (.*) https://webltop.ru/$1 [R=301,L]
 
 RewriteCond %{HTTP_USER_AGENT} wget [NC]
 RewriteRule .* - [F]

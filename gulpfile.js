@@ -1,17 +1,20 @@
-var syntax        = 'sass'; // Syntax: sass or scss;
+var syntax       = 'sass'; // Syntax: sass or scss;
 
-var gulp          = require('gulp'),
-    gutil         = require('gulp-util' ),
-    sass          = require('gulp-sass'),
-    browsersync   = require('browser-sync'),
-    concat        = require('gulp-concat'),
-    uglify        = require('gulp-uglify'),
-    cleancss      = require('gulp-clean-css'),
-    rename        = require('gulp-rename'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    notify        = require("gulp-notify"),	
-    cssnano       = require('gulp-cssnano'),
-    rsync         = require('gulp-rsync');
+var gulp         = require('gulp'),
+    gutil        = require('gulp-util' ),
+    sass         = require('gulp-sass'),
+    browsersync  = require('browser-sync'),
+    concat       = require('gulp-concat'),
+    uglify       = require('gulp-uglify'),
+    cleancss     = require('gulp-clean-css'),
+    rename       = require('gulp-rename'),
+    autoprefixer = require('gulp-autoprefixer'),
+    notify       = require("gulp-notify"),	
+    cssnano      = require('gulp-cssnano'),
+    rsync        = require('gulp-rsync'),
+    cache        = require('gulp-cache'),
+    imagemin     = require('gulp-imagemin'),
+    pngquant     = require('imagemin-pngquant');
 
 
 
@@ -23,7 +26,7 @@ gulp.task('browser-sync', function() {
 		notify: false,
 		open: false,
 		//tunnel: true,
-		//tunnel: "jekyll-webltop", //Demonstration page: http://jekyll-webltop.localtunnel.me
+		//tunnel: "webltop", //Demonstration page: http://webltop.localtunnel.me
 	})
 });
 
@@ -59,8 +62,20 @@ gulp.task('js', function() {
 	.pipe(browsersync.reload({ stream: true }))
 });
 
-
-
+gulp.task('rsync', function() {
+	return gulp.src('_site/**')
+	.pipe(rsync({
+		root: '_site/',
+		hostname: 'user123@webltop.ru',
+		destination: 'www/webltop.ru/',
+		// include: ['*.htaccess'], // Includes files to deploy
+		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
+		recursive: true,
+		archive: true,
+		silent: false,
+		compress: true
+	}))
+});
 
 gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('assets/'+syntax+'/**/*.'+syntax+'', ['sass']); // Наблюдение за sass файлами в папке sass
@@ -68,7 +83,15 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch(['*.html', '_site/**/*.html'], browsersync.reload) // Наблюдение за HTML файлами в корне проекта
 });
 
-
-
+gulp.task('img', function() {
+  return gulp.src('images/**/*') // Берем все изображения из папки images
+  .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
+    interlaced: true,
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}],
+    use: [pngquant()]
+  })))
+  .pipe(gulp.dest('images-dist')); // Выгружаем 
+});
 
 gulp.task('default', ['watch']);
