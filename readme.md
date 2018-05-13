@@ -21,3 +21,8 @@ Version: 1.0
 
 * Automatic image processing and compression-there is a configured task in `gulpfile.js` with connected `gulp-imagemin` and `imagemin-pngquant` is executed by `gulp img` command.
 * Upload your finished website to your hosting has a customized task to diploy your project to your hosting, carer `gulp-rsync`. Settings are configured in the `gulpfile.js` in the task `rsync` which is executed by `gulp rsync`.
+
+
+Website template WeblTOP developed Sergey Pinchukov!
+
+https://pinchukov.net/templates/webltop.html
