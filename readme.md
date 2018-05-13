@@ -1,4 +1,4 @@
-# Шаблон сайта для Jekyll - WeblTOP
+# Site template for Jekyll - WeblTOP
 
 Version: 1.0
 
