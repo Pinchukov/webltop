@@ -1,6 +1,6 @@
 # Site template for Jekyll - WeblTOP
 
-Version: 1.0
+Version: 2.0
 
 - Front end framework: UIKit3
 - Gulp: Yes

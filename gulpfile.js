@@ -1,21 +1,21 @@
-var syntax       = 'sass'; // Syntax: sass or scss;
+var syntax        = 'sass', // выберете используемый синтаксис sass или scss, и перенастройте нужные пути в файле gulp.js и папки в вашего шаблоне wp
+		gulpversion   = '4'; // Выберете обязателньо свою версию Gulp: 3 или 4
 
-var gulp         = require('gulp'),
-    gutil        = require('gulp-util' ),
-    sass         = require('gulp-sass'),
-    browsersync  = require('browser-sync'),
-    concat       = require('gulp-concat'),
-    uglify       = require('gulp-uglify'),
-    cleancss     = require('gulp-clean-css'),
-    rename       = require('gulp-rename'),
-    autoprefixer = require('gulp-autoprefixer'),
-    notify       = require("gulp-notify"),	
-    cssnano      = require('gulp-cssnano'),
-    rsync        = require('gulp-rsync'),
-    cache        = require('gulp-cache'),
-    imagemin     = require('gulp-imagemin'),
-    pngquant     = require('imagemin-pngquant');
-
+var gulp          = require('gulp'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    browsersync   = require('browser-sync'),
+    concat        = require('gulp-concat'),
+    cache         = require('gulp-cache'),
+    cleancss      = require('gulp-clean-css'),
+    ftp           = require('vinyl-ftp'),
+		imagemin      = require('gulp-imagemin'),
+		notify        = require('gulp-notify'),
+		pngquant      = require('imagemin-pngquant'),
+		gutil         = require('gulp-util' ),
+		rename        = require('gulp-rename'),
+		rsync         = require('gulp-rsync'),
+		sass          = require('gulp-sass'),
+		uglify        = require('gulp-uglify');
 
 
 gulp.task('browser-sync', function() {
@@ -30,9 +30,7 @@ gulp.task('browser-sync', function() {
 	})
 });
 
-
-
-gulp.task('sass', function() {
+gulp.task('styles', function() {
 	return gulp.src('assets/'+syntax+'/**/*.'+syntax+'')
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(concat('style.min.css'))
@@ -44,7 +42,7 @@ gulp.task('sass', function() {
 });
 
 
-gulp.task('js', function() {
+gulp.task('scripts', function() {
 	return gulp.src([
 		'assets/libs/jquery/jquery.min.js',
 		'assets/libs/uikit3/dist/js/uikit.min.js',
@@ -77,10 +75,20 @@ gulp.task('rsync', function() {
 	}))
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
-	gulp.watch('assets/'+syntax+'/**/*.'+syntax+'', ['sass']); // Наблюдение за sass файлами в папке sass
-	gulp.watch(['assets/libs/**/*.js', 'assets/js/common.js'], ['js']); // Наблюдение за JS файлами в папке js
-	gulp.watch(['*.html', '_site/**/*.html'], browsersync.reload) // Наблюдение за HTML файлами в корне проекта
+gulp.task('deploy', function() {
+	var conn = ftp.create({
+			host: '00.000.000.000', // IP or domain
+			user: 'ftp-user',
+			password: 'pass-ftp-user',
+			parallel: 10,
+			log: gutil.log
+	});
+			var globs = [
+			'_site/**',
+			'_site/.htaccess',
+			];
+  return gulp.src(globs, {buffer: false})
+	.pipe(conn.dest('www/webltop.ru/'));
 });
 
 gulp.task('img', function() {
@@ -94,4 +102,22 @@ gulp.task('img', function() {
   .pipe(gulp.dest('images-dist')); // Выгружаем 
 });
 
-gulp.task('default', ['watch']);
+
+if (gulpversion == 3) {
+  gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {
+	  gulp.watch('assets/'+syntax+'/**/*.'+syntax+'', ['styles']); // Наблюдение за sass файлами в папке sass
+	  gulp.watch(['assets/libs/**/*.js', 'assets/js/common.js'], ['scripts']); // Наблюдение за JS файлами в папке js
+	  gulp.watch(['*.html', '_site/**/*.html'], browsersync.reload) // Наблюдение за HTML файлами в корне проекта
+  });
+  gulp.task('default', ['watch']);
+}
+
+
+if (gulpversion == 4) {
+  gulp.task('watch', function() {
+	  gulp.watch('assets/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles')); // Наблюдение за sass файлами в папке sass
+	  gulp.watch(['assets/libs/**/*.js', 'assets/js/common.js'], gulp.parallel('scripts')); // Наблюдение за JS файлами в папке js
+	  gulp.watch(['*.html', '_site/**/*.html'], browsersync.reload) // Наблюдение за HTML файлами в корне проекта
+  });
+  gulp.task('default', gulp.parallel('styles', 'scripts', 'browser-sync', 'watch'));
+}
